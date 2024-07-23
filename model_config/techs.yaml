@@ -1,0 +1,19 @@
+import:
+    - 'techs/solar.yaml'
+    - 'techs/solar_floating.yaml'
+    - 'techs/onshore_wind.yaml'
+    - 'techs/offshore_wind.yaml'
+    - 'techs/otec.yaml'
+    - 'techs/diesel.yaml'
+    - 'techs/cc_gas.yaml'
+    - 'techs/oc_gas.yaml'
+    - 'techs/battery.yaml'
+
+techs:
+    # Demand
+    demand_power:
+        essentials:
+            name: 'Power demand'
+            color: '#072486'
+            parent: demand
+            carrier: power

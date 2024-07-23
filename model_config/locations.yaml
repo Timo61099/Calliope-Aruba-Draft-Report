@@ -1,0 +1,50 @@
+##
+# LOCATION
+##
+
+# assumptions for energy_cap_max/equals:
+# - onshore_wind: ...
+# - offshore_wind: ...
+# - solar PV: ...
+# - floating solar PV: ...
+# - battery: ...
+# - otec: ...
+
+locations:
+
+    Aruba:
+        coordinates: { lat: 12.5211, lon: -69.9683 }
+        techs:
+            demand_power:
+                constraints:
+                    resource: file=Demand_Profile_Aruba_weekly_peaks_2021.csv:Aruba # MW
+            otec:
+                constraints:
+                    resource: file=OTEC_Profiles_2050_Aruba.csv:Aruba
+                    energy_cap_max: 400 # MW_gross
+            onshore_wind:
+                constraints:
+                    resource: file=Onshore_Wind_Profiles_Aruba_mean_2.csv:Aruba
+                    energy_cap_max: 2000 # MW
+            offshore_wind:
+                constraints:
+                    resource: file=Offshore_Wind_Profiles_Aruba_mean.csv:Aruba
+                    energy_cap_max: 30000 # MW
+            solar:
+                constraints:
+                    resource: file=Solar_PV_Profiles_Aruba_mean.csv:Aruba
+                    energy_cap_max: 75 # MW (see excel calc Sollicitaties 24.1, 50% land)
+            solar_floating:
+                constraints:
+                    resource: file=Solar_PV_Profiles_Aruba_mean.csv:Aruba
+                    energy_cap_max: 1500 # MW
+            battery:
+            diesel:
+                constraints:
+                    energy_cap_max: 0 # MW
+            cc_gas:
+                constraints:
+                    energy_cap_max: 0 #energy_cap_max_use: 0 # MW
+            oc_gas:
+                constraints:
+                    energy_cap_max: 0 #MW
