@@ -10,40 +10,27 @@ scenarios:
     resolution_test_6H: ["6H_resolution"]
     resolution_test_8H: ["8H_resolution"]
 
-# Scenario A: Base Case (2021, 2030 and 2050 modeled for Base Demand, Capacity and Costs)
+# Scenario Reference Case (2021, 2030 and 2050 modeled for Base Demand, Capacity and Costs)
     base_scenario_2021_old: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021"]
-    base_scenario_2030_old: ["demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030"]
-    base_scenario_2040_old: ["demand_2040", "base_scenario_capacity_max", "base_scenario_costs_2040"]
-    base_scenario_2050_old: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050"]
 
     base_scenario_2030_V2: ["demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030_2"]
     base_scenario_2040_V2: ["demand_2040", "base_scenario_capacity_max", "base_scenario_costs_2040_2"]
     base_scenario_2050_V2_ref: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050_2_ref"]
     base_scenario_2050_V2_min: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050_2_min"]
 
-    #base_scenario_2021_CF2019: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "base_scenario_CF_2019"]
-    #base_scenario_2030_CF2019: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "base_scenario_CF_2019"]
-    #base_scenario_2050_CF2019: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "base_scenario_CF_2019"]
-
-    #base_scenario_2021_Siemens_wind: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "base_scenario_CF_Siemens_2013"]
-
 # Scenario B: Cost Range Analysis
     # FPV Cost Analysis
     Scenario_B1-1_FPV_CAPEX_+20%_2021: ["demand_2021", "Scenario_B1-1_Costs_2021", "base_scenario_capacity_max"]
-    #Scenario_B1-1_FPV_CAPEX_+20%_2030: ["demand_2030", "Scenario_B1-1_Costs_2030", "base_scenario_capacity_max"]
     Scenario_B1-1_FPV_CAPEX_+20%_2050: ["demand_2050", "Scenario_B1-1_Costs_2050", "base_scenario_capacity_max"]
 
     Scenario_B1-2_FPV_CAPEX_-20%_2021: ["demand_2021", "Scenario_B1-2_Costs_2021", "base_scenario_capacity_max"]
-    #Scenario_B1-2_FPV_CAPEX_-20%_2030: ["demand_2030", "Scenario_B1-2_Costs_2030", "base_scenario_capacity_max"]
     Scenario_B1-2_FPV_CAPEX_-20%_2050: ["demand_2050", "Scenario_B1-2_Costs_2050", "base_scenario_capacity_max"]
 
     # OTEC Cost Analysis
     Scenario_B2-1_OTEC_CAPEX_+20%_2021: ["demand_2021", "Scenario_B2-1_Costs_2021", "base_scenario_capacity_max"]
-    #Scenario_B2-1_OTEC_CAPEX_+20%_2030: ["demand_2030", "Scenario_B2-1_Costs_2030", "base_scenario_capacity_max"]
     Scenario_B2-1_OTEC_CAPEX_+20%_2050: ["demand_2050", "Scenario_B2-1_Costs_2050", "base_scenario_capacity_max"]
 
     Scenario_B2-2_OTEC_CAPEX_-20%_2021: [ "demand_2021", "Scenario_B2-2_Costs_2021", "base_scenario_capacity_max" ]
-    #Scenario_B2-2_OTEC_CAPEX_-20%_2030: [ "demand_2030", "Scenario_B2-2_Costs_2030", "base_scenario_capacity_max" ]
     Scenario_B2-2_OTEC_CAPEX_-20%_2050: [ "demand_2050", "Scenario_B2-2_Costs_2050", "base_scenario_capacity_max" ]
 
     Scenario_B3_2030: ["demand_2030", "Scenario_B3_Costs_2030", "base_scenario_capacity_max"]
@@ -51,40 +38,27 @@ scenarios:
 
     # Battery Cost Analysis
     Scenario_B4-1_Battery_CAPEX_+20%_2021:
-    #Scenario_B4-1_Battery_CAPEX_+20%_2030:
     Scenario_B4-1_Battery_CAPEX_+20%_2050: ["demand_2050", "Scenario_B4-1_Costs_Battery_Capex_+20%_2050", "base_scenario_capacity_max"]
 
     Scenario_B4-1_Battery_CAPEX_-20%_2021: ["demand_2021", "Scenario_B4-1_Costs_Battery_Capex_-20%_2021", "base_scenario_capacity_max"]
-    #Scenario_B4-1_Battery_CAPEX_-20%_2030:
     Scenario_B4-1_Battery_CAPEX_-20%_2050: [ "demand_2050", "Scenario_B4-1_Costs_Battery_Capex_-20%_2050", "base_scenario_capacity_max" ]
 
 # Scenario: OTEC Plant size
     Scenario_OTEC_10MW_2021: ["demand_2021", "base_scenario_capacity_max", "costs_OTEC_10MW_2021"]
-    Scenario_OTEC_10MW_2030: ["demand_2030", "base_scenario_capacity_max", ""]
     Scenario_OTEC_10MW_2050: ["demand_2050", "base_scenario_capacity_max", "costs_OTEC_10MW_2050"]
 
     Scenario_OTEC_40MW_2021: ["demand_2021", "base_scenario_capacity_max", "costs_OTEC_40MW_2021"]
-    Scenario_OTEC_40MW_2030: ["demand_2030", "base_scenario_capacity_max", ""]
     Scenario_OTEC_40MW_2050: ["demand_2050", "base_scenario_capacity_max", "costs_OTEC_40_2050"]
 
     Scenario_OTEC_80MW_2021: [ "demand_2021", "base_scenario_capacity_max", "costs_OTEC_80MW_2021" ]
-    Scenario_OTEC_80MW_2030: [ "demand_2030", "base_scenario_capacity_max", "" ]
     Scenario_OTEC_80MW_2050: [ "demand_2050", "base_scenario_capacity_max", "costs_OTEC_80MW_2050" ]
 
-# Scenario C: Capacity Limitation / Technical Limitation
-    Scenario_C1_zero_OTEC_2021: ["demand_2021", "base_scenario_costs_2030_2", "Scenario_C1_zero_OTEC_capacity_max"]
-    Scenario_C1_2030: ["demand_2030", "base_scenario_costs_2030", "Scenario_C1_capacity_max"]
+# Scenario: Capacity Limitation / Technical Limitation
     Scenario_C1_zero_OTEC_2050: ["demand_2050", "base_scenario_costs_2050_2_ref", "Scenario_C1_zero_OTEC_capacity_max"]
-
-    Scenario_C2_Land_5%_2021: ["demand_2021", "", "base_scenario_costs_2021"]
-    Scenario_C2_Land_5%_2030: ["demand_2030", "", "base_scenario_costs_2030"]
     Scenario_C2_Land_5%_2050: ["demand_2050", "capacity_max_C2_Land_5%", "base_scenario_costs_2050_2_ref"]
-
-    Scenario_C2_Land_15%_2021: [ "demand_2021", "", "base_scenario_costs_2021" ]
-    Scenario_C2_Land_15%_2030: [ "demand_2030", "", "base_scenario_costs_2030" ]
     Scenario_C2_Land_15%_2050: [ "demand_2050", "capacity_max_C2_Land_15%", "base_scenario_costs_2050_2_ref" ]
 
-# Scenario D: Fossil Fuels included
+# Scenario: Fossil Fuels included
     Scenario_D_FF_zero_by2050_2021: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "Scenario_D_fossil_fuel_capacity_2021"]
     Scenario_D_2030: ["demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030", "Scenario_D_fossil_fuel_capacity_2030"]
     Scenario_D_2050: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050", "Scenario_D_fossil_fuel_capacity_2050"]
@@ -95,23 +69,16 @@ scenarios:
     Scenario_D0_no_restr_2030: [ "demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030", "Scenario_D0_fossil_fuel_capacity_2030" ]
     Scenario_D0_no_restr_2050: [ "demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050_2_ref", "Scenario_D0_fossil_fuel_capacity_2050" ]
 
-# Scenario E: Average CF
+# Scenario: Average CF
     Scenario_E_2021: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "Scenario_E_CF"]
     Scenario_E_2030: ["demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030", "Scenario_E_CF"]
     Scenario_E_2050: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050", "Scenario_E_CF"]
 
 # Scenario Max and Min Wind & Solar CF
-    Scenario_CF_max_2021: ["demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "CF_Wind_Solar_max"]
-    Scenario_CF_max_2030: ["demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030", "..."]
     Scenario_CF_max_2050: ["demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050_2_ref", "CF_Wind_Solar_max"]
-
-    Scenario_CF_min_2021: [ "demand_2021", "base_scenario_capacity_max", "base_scenario_costs_2021", "CF_Wind_Solar_min" ]
-    Scenario_CF_min_2030: [ "demand_2030", "base_scenario_capacity_max", "base_scenario_costs_2030", "..." ]
     Scenario_CF_min_2050: [ "demand_2050", "base_scenario_capacity_max", "base_scenario_costs_2050_2_ref", "CF_Wind_Solar_min" ]
 
 # Scenario Subsidies
-    Scenario_Subsidy_25%_2021: ["demand_2021", "base_scenario_capacity_max", ""]
-    Scenario_Subsidy_25%_2030: ["demand_2030", "base_scenario_capacity_max", ""]
     Scenario_Subsidy_25%_2050: ["demand_2050", "base_scenario_capacity_max", "costs_subsidy_25%_2050"]
 
 ##
@@ -160,7 +127,7 @@ overrides:
     demand_2050:
         locations.Aruba.techs.demand_power.constraints.resource: file=Demand_Profile_Aruba_weekly_peaks_2050.csv:Aruba
 
-    # ------ Scenario A: Base Scenario ------ #
+    # ------ Scenario: Reference Scenario ------ #
 
     # Capacity
     base_scenario_capacity_max:
@@ -183,45 +150,6 @@ overrides:
         techs.solar_floating.costs.monetary.energy_cap: 1497000  #1194000 #1373100
         techs.solar_floating.costs.monetary.om_annual: 59880 # 4% CAPEX, might be high
         techs.battery.costs.monetary.storage_cap: 300200
-
-    base_scenario_costs_2030:
-        techs.otec.costs.monetary.energy_cap: 5940000
-        techs.onshore_wind.costs.monetary.energy_cap: 1497000
-        techs.onshore_wind.costs.monetary.om_annual: 43000
-        techs.offshore_wind.costs.monetary.energy_cap: 3779000
-        techs.offshore_wind.costs.monetary.om_annual: 17000
-        techs.offshore_wind.costs.monetary.om_prod: 21.8
-        techs.solar.costs.monetary.energy_cap: 825000
-        techs.solar.costs.monetary.om_annual: 13000
-        techs.solar_floating.costs.monetary.energy_cap: 1034000
-        techs.solar_floating.costs.monetary.om_annual:  31020
-        techs.battery.costs.monetary.storage_cap: 162186
-
-    base_scenario_costs_2040:
-        techs.otec.costs.monetary.energy_cap: 5412000
-        techs.onshore_wind.costs.monetary.energy_cap: 1412000
-        techs.onshore_wind.costs.monetary.om_annual: 39000
-        techs.offshore_wind.costs.monetary.energy_cap: 3524000
-        techs.offshore_wind.costs.monetary.om_annual: 15000
-        techs.offshore_wind.costs.monetary.om_prod: 19.8
-        techs.solar.costs.monetary.energy_cap: 698000
-        techs.solar.costs.monetary.om_annual: 11000
-        techs.solar_floating.costs.monetary.energy_cap: 875000
-        techs.solar_floating.costs.monetary.om_annual: 17500
-        techs.battery.costs.monetary.storage_cap: 125147
-
-    base_scenario_costs_2050:
-        techs.otec.costs.monetary.energy_cap: 4885000
-        techs.onshore_wind.costs.monetary.energy_cap: 1326000
-        techs.onshore_wind.costs.monetary.om_annual: 35000
-        techs.offshore_wind.costs.monetary.energy_cap: 3269000
-        techs.offshore_wind.costs.monetary.om_annual: 13000
-        techs.offshore_wind.costs.monetary.om_prod: 17.7
-        techs.solar.costs.monetary.energy_cap: 571000
-        techs.solar.costs.monetary.om_annual: 9000
-        techs.solar_floating.costs.monetary.energy_cap: 716000 # # #571000 #700000
-        techs.solar_floating.costs.monetary.om_annual: 14320
-        techs.battery.costs.monetary.storage_cap: 88108
 
     base_scenario_costs_2030_2:
         techs.otec.costs.monetary.energy_cap: 5940000
@@ -307,7 +235,7 @@ overrides:
     base_scenario_CF_Siemens_2013:
         locations.Aruba.techs.onshore_wind.constraints.resource: file=Siemens_SWT_Onshore_Aruba.csv:Aruba
 
-# ------ Scenario B: Cost Range Analysis ------ #
+# ------ Scenario: Cost Range Analysis ------ #
 
     # B1: Solar Cost Range: Low Range Land/Floating Solar Costs
 
